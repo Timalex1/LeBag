@@ -3,7 +3,8 @@ import { CartContext } from '../context/cart-context'
 import './checkout.styles.scss'
 import Layout from '../shared/layout'
 import { useContext } from 'react'
-import ShippingAddress from './custom-checkout/shipping-address'
+// import ShippingAddress from './custom-checkout/shipping-address'
+import StripeCheckout from './stripe-checkout/stripe-checkout'
 
 const Checkout = () => {
     const { itemCount, total } = useContext(CartContext);
@@ -19,9 +20,10 @@ const Checkout = () => {
                 <h3>{`Total Items: ${itemCount}`}</h3>
                 {console.log(addressShown)}
                 <h4>{`Amount to Pay: $${total}`}</h4>
-                <div style={addressShown}>
+                {/* <div style={addressShown}>
                     <ShippingAddress setShipping={setShipping} />
-                </div>
+                </div> */}
+                <StripeCheckout />
             </div>
         </Layout>
     )
