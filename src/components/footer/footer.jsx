@@ -5,9 +5,9 @@ const Footer = () => {
 
     const year = new Date().getFullYear();
 
-    return(
+    return (
         <div className="footer">
-            <p>NOMAD Store {year}</p>
+            <p>LE_BAG Store {year}</p>
         </div>
     )
 }
