@@ -6,6 +6,8 @@ const API = process.env.REACT_APP_API;
 
 export async function fetchFromAPI(endpoint, opts) {
 
+    console.log(API)
+
     const { method, body } = { method: 'POST', body: null, ...opts }
 
     const res = await fetch(`${API}/${endpoint}`, {
