@@ -13,7 +13,7 @@ const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  < BrowserRouter >
     <ProductsContextProvider>
       <CartContextProvider>
         <Elements stripe={stripePromise}>
@@ -21,7 +21,7 @@ root.render(
         </Elements>
       </CartContextProvider>
     </ProductsContextProvider>
-  </BrowserRouter>
+  </BrowserRouter >
 );
 
 // If you want to start mea suring performance in your app, pass a function
