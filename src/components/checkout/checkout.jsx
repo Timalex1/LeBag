@@ -21,7 +21,7 @@ const Checkout = () => {
                 {console.log(addressShown)}
                 <h4>{`Amount to Pay: $${total}`}</h4>
                 {/* <div style={addressShown}>
-                    <ShippingAddress setShipping={setShipping} />
+                    <ShippingAddress setShipping={setShipping}/>
                 </div> */}
                 <StripeCheckout />
             </div>
